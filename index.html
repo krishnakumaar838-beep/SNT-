@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNT PANEL</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            background-color: #050505; 
+            color: #e5e5e5; 
+            font-family: 'Inter', sans-serif; 
+            padding: 20px; 
+            padding-bottom: 50px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #1f1f1f;
+        }
+        
+        .header h1 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        
+        .header h1 span { color: #00ff88; } /* SNT Green Theme */
+        
+        .header p {
+            color: #666;
+            font-size: 12px;
+            margin-top: 5px;
+            font-family: monospace;
+        }
+
+        .box { 
+            border: 1px solid #1f1f1f; 
+            padding: 20px; 
+            margin-bottom: 15px; 
+            border-radius: 12px; 
+            background: #0a0a0a;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        
+        .box-title { 
+            color: #888; 
+            font-size: 12px; 
+            margin-bottom: 15px; 
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .box-title.active-title { color: #00ff88; }
+        
+        .row { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 15px; 
+        }
+        
+        .row:last-child { margin-bottom: 0; }
+        
+        .row span { font-size: 14px; font-weight: 600; color: #ccc; }
+        
+        .toggle { 
+            width: 46px; 
+            height: 24px; 
+            background: #222; 
+            border-radius: 12px; 
+            position: relative; 
+            cursor: pointer; 
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+        
+        .toggle.active { 
+            background: #00ff88; 
+            border-color: #00ff88;
+        }
+        
+        .toggle::after { 
+            content: ''; 
+            position: absolute; 
+            top: 2px; 
+            left: 2px; 
+            width: 18px; 
+            height: 18px; 
+            background: #fff; 
+            border-radius: 50%; 
+            transition: 0.3s; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .toggle.active::after { 
+            left: 24px; 
+            background: #000;
+        }
+
+        .btn { 
+            width: 100%; 
+            padding: 16px; 
+            background: transparent; 
+            color: #00ff88; 
+            border: 2px solid #00ff88; 
+            border-radius: 12px; 
+            font-weight: 800; 
+            font-family: 'Inter', sans-serif;
+            cursor: pointer; 
+            margin-top: 30px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .btn:hover, .btn:active {
+            background: #00ff88;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1><span>S</span>NT PANEL</h1>
+        <p>secure.snt-server.net</p>
+    </div>
+
+    <div class="box">
+        <div class="box-title active-title">⚡ SYSTEM STATUS</div>
+        <div class="row">
+            <span>Anti-Cheat Bypass</span>
+            <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+        </div>
+        <div class="row">
+            <span>Server Ping</span>
+            <span style="color:#00ff88; font-family:monospace;">24ms</span>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-title active-title">🎯 AIMBOT SETTINGS</div>
+        <div class="row">
+            <span>Enable Aimbot</span>
+            <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+        </div>
+        <div class="row">
+            <span>Neck Anchor</span>
+            <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+        </div>
+        <div class="row">
+            <span>Target Hold (On Fire)</span>
+            <div class="toggle" onclick="this.classList.toggle('active')"></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-title">👁️ VISUALS (ESP)</div>
+        <div class="row">
+            <span>Player ESP</span>
+            <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+        </div>
+        <div class="row">
+            <span>Gloo Wall Flip</span>
+            <div class="toggle" onclick="this.classList.toggle('active')"></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-title">💎 EXPLOITS</div>
+        <div class="row">
+            <span>Quick Revive</span>
+            <div class="toggle active" onclick="this.classList.toggle('active')"></div>
+        </div>
+        <div class="row">
+            <span>Location Spoof</span>
+            <div class="toggle" onclick="this.classList.toggle('active')"></div>
+        </div>
+    </div>
+
+    <button class="btn" onclick="alert('VPN Config Downloaded!')">GET CONFIG</button>
+
+</body>
+</html>
